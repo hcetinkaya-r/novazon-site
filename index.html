@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Novazon | Sitemiz yapım aşamasında</title>
+<meta name="description" content="Novazon, spor ve outdoor ürünlerini Amazon.com.tr üzerinden satan bir e-ticaret şirketidir. Web sitemiz yapım aşamasındadır.">
+<meta name="theme-color" content="#0F2C3F">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="preload" href="fonts/montserrat-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:Montserrat;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-800-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Montserrat;font-weight:800;font-display:swap;src:url(fonts/montserrat-latin-ext-800-normal.woff2) format("woff2");unicode-range:U+0100-0130,U+0132-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(fonts/inter-latin-400-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Inter;font-weight:400;font-display:swap;src:url(fonts/inter-latin-ext-400-normal.woff2) format("woff2");unicode-range:U+0100-0130,U+0132-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(fonts/inter-latin-600-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:Inter;font-weight:600;font-display:swap;src:url(fonts/inter-latin-ext-600-normal.woff2) format("woff2");unicode-range:U+0100-0130,U+0132-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+1E00-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2C60-2C7F,U+A720-A7FF}
+
+:root{--lacivert:#0F2C3F;--turuncu:#F2602B;--buzul:#EAF1F3;--granit:#5E6B73;--kenar:clamp(1.5rem,5vw,5rem)}
+*{box-sizing:border-box;margin:0}
+html{-webkit-text-size-adjust:100%}
+body{min-height:100svh;display:flex;flex-direction:column;background:var(--buzul);color:var(--lacivert);font:400 1rem/1.6 Inter,system-ui,sans-serif}
+
+.gokyuzu{flex:1;display:grid;grid-template-columns:minmax(0,1fr) auto;grid-template-rows:auto 1fr;column-gap:clamp(1.5rem,4vw,4rem);padding:clamp(1.5rem,3.5vw,2.75rem) var(--kenar) 0;background:var(--lacivert);color:#fff}
+.yazi-logo{grid-column:1/-1;display:block;width:clamp(9.5rem,16vw,12.5rem);height:auto;fill:#fff}
+.mesaj{grid-column:1;align-self:center;max-width:38rem;padding-block:clamp(2.5rem,6vh,4rem)}
+h1{font:800 clamp(2.5rem,6.2vw,5.25rem)/1.04 Montserrat,Inter,sans-serif;letter-spacing:-.022em}
+.ozet{margin-top:1.5rem;max-width:32rem;font-size:clamp(1.0625rem,1.5vw,1.25rem);line-height:1.5}
+.ingilizce{margin-top:1rem;max-width:32rem;color:#C5D3DA}
+.zirve{grid-column:2;grid-row:2;align-self:end;display:block;height:min(62vh,34rem);width:auto;margin-bottom:-1px}
+.zirve .dag{fill:var(--buzul)}
+.zirve .yildiz{fill:var(--turuncu);transform-box:fill-box;transform-origin:center;animation:yildiz 1.1s cubic-bezier(.2,.8,.2,1) .15s both}
+@keyframes yildiz{from{opacity:0;transform:scale(.2) rotate(-45deg)}to{opacity:1;transform:none}}
+
+.kunye{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:2rem clamp(2rem,6vw,6rem);padding:clamp(2rem,4vw,3rem) var(--kenar)}
+h2{font:800 clamp(1.125rem,1.7vw,1.375rem)/1.3 Montserrat,Inter,sans-serif;max-width:32rem}
+address{margin-top:.75rem;font-style:normal;max-width:30rem}
+dl{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem 2rem;align-content:start}
+dt{font-size:.875rem;color:var(--granit)}
+dd{margin:0;font-weight:600;font-variant-numeric:tabular-nums}
+
+@media (max-width:760px){
+  .gokyuzu{grid-template-columns:minmax(0,1fr)}
+  .mesaj{padding-block:2.5rem 1.5rem}
+  .zirve{grid-column:1;grid-row:auto;justify-self:end;height:auto;width:min(58vw,15rem)}
+  .kunye{grid-template-columns:minmax(0,1fr)}
+}
+@media (prefers-reduced-motion:reduce){.zirve .yildiz{animation:none}}
+</style>
+</head>
+<body>
+<main class="gokyuzu">
+  <svg class="yazi-logo" viewBox="132 29 339 44" role="img" aria-label="Novazon"><path d="M132.2 72V30H141.98L165.14 57.96H160.52V30H172.16V72H162.38L139.22 44.04H143.84V72ZM204.14 72.84Q199.1 72.84 194.84 71.22Q190.58 69.6 187.43 66.63Q184.28 63.66 182.54 59.7Q180.8 55.74 180.8 51Q180.8 46.26 182.54 42.3Q184.28 38.34 187.43 35.37Q190.58 32.4 194.84 30.78Q199.1 29.16 204.14 29.16Q209.24 29.16 213.47 30.78Q217.7 32.4 220.82 35.37Q223.94 38.34 225.71 42.3Q227.48 46.26 227.48 51Q227.48 55.74 225.71 59.73Q223.94 63.72 220.82 66.66Q217.7 69.6 213.47 71.22Q209.24 72.84 204.14 72.84ZM204.14 63Q206.54 63 208.61 62.16Q210.68 61.32 212.21 59.73Q213.74 58.14 214.61 55.92Q215.48 53.7 215.48 51Q215.48 48.24 214.61 46.05Q213.74 43.86 212.21 42.27Q210.68 40.68 208.61 39.84Q206.54 39 204.14 39Q201.74 39 199.67 39.84Q197.6 40.68 196.07 42.27Q194.54 43.86 193.67 46.05Q192.8 48.24 192.8 51Q192.8 53.7 193.67 55.92Q194.54 58.14 196.07 59.73Q197.6 61.32 199.67 62.16Q201.74 63 204.14 63ZM249.02 72 231.08 30H243.92L259.04 66.36H251.48L266.96 30H278.72L260.72 72ZM279.44 72 297.98 30H309.68L328.28 72H315.92L301.4 35.82H306.08L291.56 72ZM289.58 63.84 292.64 55.08H313.16L316.22 63.84ZM331.94 72V64.56L356.66 35.22L358.1 39.42H332.48V30H368.66V37.44L343.94 66.78L342.5 62.58H369.56V72ZM398.36 72.84Q393.32 72.84 389.06 71.22Q384.8 69.6 381.65 66.63Q378.5 63.66 376.76 59.7Q375.02 55.74 375.02 51Q375.02 46.26 376.76 42.3Q378.5 38.34 381.65 35.37Q384.8 32.4 389.06 30.78Q393.32 29.16 398.36 29.16Q403.46 29.16 407.69 30.78Q411.92 32.4 415.04 35.37Q418.16 38.34 419.93 42.3Q421.7 46.26 421.7 51Q421.7 55.74 419.93 59.73Q418.16 63.72 415.04 66.66Q411.92 69.6 407.69 71.22Q403.46 72.84 398.36 72.84ZM398.36 63Q400.76 63 402.83 62.16Q404.9 61.32 406.43 59.73Q407.96 58.14 408.83 55.92Q409.7 53.7 409.7 51Q409.7 48.24 408.83 46.05Q407.96 43.86 406.43 42.27Q404.9 40.68 402.83 39.84Q400.76 39 398.36 39Q395.96 39 393.89 39.84Q391.82 40.68 390.29 42.27Q388.76 43.86 387.89 46.05Q387.02 48.24 387.02 51Q387.02 53.7 387.89 55.92Q388.76 58.14 390.29 59.73Q391.82 61.32 393.89 62.16Q395.96 63 398.36 63ZM430.34 72V30H440.12L463.28 57.96H458.66V30H470.3V72H460.52L437.36 44.04H441.98V72Z"/></svg>
+  <div class="mesaj">
+    <h1>Sitemiz yapım aşamasında</h1>
+    <p class="ozet">Novazon, spor ve outdoor ürünlerini Amazon.com.tr üzerinden satan bir e-ticaret şirketidir.</p>
+    <p class="ingilizce" lang="en">Our website is under construction. Novazon is an e-commerce company selling sports and outdoor products on Amazon.com.tr.</p>
+  </div>
+  <svg class="zirve" viewBox="10 0 83 90" aria-hidden="true">
+    <path class="dag" d="M10 90 L10 34 L25 6 L40 30 L60 60 L60 46 L75 22 L90 46 L90 90 L63 90 L38 54 L38 90 Z"/>
+    <path class="yildiz" d="M84 0 Q84.819 8.181 93 9 Q84.819 9.819 84 18 Q83.181 9.819 75 9 Q83.181 8.181 84 0Z"/>
+  </svg>
+</main>
+<footer class="kunye">
+  <div>
+    <h2>NOVAZON E-TİCARET VE BİLİŞİM HİZMETLERİ LTD. ŞTİ.</h2>
+    <address>Muratpaşa Mah. Pınar Sk. ÖTIN No: 51-53 İç Kapı No: 2<br>Bayrampaşa / İSTANBUL</address>
+  </div>
+  <dl>
+    <div><dt>Vergi dairesi</dt><dd>Tuna</dd></div>
+    <div><dt>Vergi no</dt><dd>6321589326</dd></div>
+    <div><dt>Ticaret sicil no</dt><dd>1148697</dd></div>
+    <div><dt>MERSİS no</dt><dd>0632158932600001</dd></div>
+  </dl>
+</footer>
+</body>
+</html>
